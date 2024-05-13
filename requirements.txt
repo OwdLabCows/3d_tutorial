@@ -4,3 +4,5 @@ scipy
 matplotlib
 opencv-python
 ultralytics
+plotly
+nbformat>=4.2.0
