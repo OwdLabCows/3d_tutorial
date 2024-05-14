@@ -34,7 +34,7 @@ class ImageApp:
         return self.resize_height / height
 
     def resize(self, img):
-        return cv2.resize(img, None, fx=self.rate, fy=self.rate)
+        return cv2.resize(self.img, None, fx=self.rate, fy=self.rate)
 
     def run(self):
         img_list = os.listdir(self.img_dir)
@@ -78,7 +78,7 @@ class ImageApp:
         with open(os.path.join(os.path.expanduser(self.img_dir), 'subsets.json'), 'w') as f:
             json.dump(self.coordinates_data, f, indent=4)
 
-# Usage:
+
 if __name__ == '__main__':
     app = ImageApp(img_dir="cube", resize_height=800)
     app.run()
